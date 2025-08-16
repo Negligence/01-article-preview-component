@@ -10,24 +10,57 @@ html {
   height: 100%;
   width: 100%;
 
-  --moderate-violet: hsl(263, 55%, 52%);
-  --very-dark-grayish-blue: hsl(217, 19%, 35%);
-  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --grey-900: hsl(217, 19%, 35%);
+  --grey-500: hsl(214, 17%, 51%);
+  --grey-400: hsl(212, 23%, 69%);
+  --grey-200: hsl(210, 46%, 95%);
   --white: hsl(0, 0%, 100%);
-  --light-gray: hsl(0, 0%, 81%);
-  --light-grayish-blue: hsl(210, 46%, 95%);
-  
-  --ff-body: "Barlow Semi Condensed", sans-serif;
 
-  --fz-head: calc(20 / 16 * 1rem);
+  --ff-body: "Manrope", sans-serif;
+
+  // --fz-head: calc(20 / 16 * 1rem);
   --fz-body: calc(13 / 16 * 1rem);
-  --fz-sub: calc(11 / 16 * 1rem);
+  // --fz-sub: calc(11 / 16 * 1rem);
 
   --fw-medium: 500;
-  --fw-semi-bold: 600;
+  --fw-bold: 700;
 
+  --s-2000: calc(160 / 16 * 1rem);
+  --s-1950: calc(156 / 16 * 1rem);
+  --s-1900: calc(152 / 16 * 1rem);
+  --s-1850: calc(148 / 16 * 1rem);
+  --s-1800: calc(144 / 16 * 1rem);
+  --s-1750: calc(140 / 16 * 1rem);
+  --s-1700: calc(136 / 16 * 1rem);
+  --s-1650: calc(132 / 16 * 1rem);
+  --s-1600: calc(128 / 16 * 1rem);
+  --s-1550: calc(124 / 16 * 1rem);
+  --s-1500: calc(120 / 16 * 1rem);
+  --s-1450: calc(116 / 16 * 1rem);
+  --s-1400: calc(112 / 16 * 1rem);
+  --s-1350: calc(108 / 16 * 1rem);
+  --s-1300: calc(104 / 16 * 1rem);
+  --s-1250: calc(100 / 16 * 1rem);
+  --s-1200: calc(96 / 16 * 1rem);
+  --s-1150: calc(92 / 16 * 1rem);
+  --s-1100: calc(88 / 16 * 1rem);
+  --s-1050: calc(84 / 16 * 1rem);
+  --s-1000: calc(80 / 16 * 1rem);
+  --s-950: calc(76 / 16 * 1rem);
+  --s-900: calc(72 / 16 * 1rem);
+  --s-850: calc(68 / 16 * 1rem);
+  --s-800: calc(64 / 16 * 1rem);
+  --s-750: calc(60 / 16 * 1rem);
+  --s-700: calc(56 / 16 * 1rem);
+  --s-650: calc(52 / 16 * 1rem);
+  --s-600: calc(48 / 16 * 1rem);
+  --s-550: calc(44 / 16 * 1rem);
   --s-500: calc(40 / 16 * 1rem);
+  --s-450: calc(36 / 16 * 1rem);
+  --s-400: calc(32 / 16 * 1rem);
+  --s-350: calc(28 / 16 * 1rem);
   --s-300: calc(24 / 16 * 1rem);
+  --s-250: calc(20 / 16 * 1rem);
   --s-200: calc(16 / 16 * 1rem);
   --s-150: calc(12 / 16 * 1rem);
   --s-100: calc(8 / 16 * 1rem);
@@ -146,12 +179,12 @@ main {
   background-color: var(--moderate-violet);
   color: var(--white);
   position: relative;
-  
+
   > svg {
     position: absolute;
     right: rem(24px);
   }
-  
+
   .card__blockquote {
     margin-block-end: rem(40px);
     z-index: 1;
