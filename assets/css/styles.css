@@ -99,6 +99,34 @@ body {
   display: grid;
 }
 
+.text-preset-1-bold {
+  font-weight: var(--fw-bold);
+  font-size: 1.25rem;
+  line-height: 1.3em;
+  letter-spacing: 0.015625rem;
+}
+
+.text-preset-2-bold {
+  font-weight: var(--fw-bold);
+  font-size: 0.8125rem;
+  line-height: 1.4em;
+  letter-spacing: 0.0012em;
+}
+
+.text-preset-2-medium {
+  font-weight: var(--fw-medium);
+  font-size: 0.8125rem;
+  line-height: 1.4em;
+  letter-spacing: 0.0012em;
+}
+
+.text-preset-3 {
+  font-weight: var(--fw-medium);
+  font-size: 0.8125rem;
+  line-height: 1.4em;
+  letter-spacing: 0.25em;
+}
+
 /* #endregion Reusable CSS */
 /* #region Mobile 375px */
 main {

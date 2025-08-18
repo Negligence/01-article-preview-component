@@ -107,6 +107,38 @@ body {
   display: grid;
 }
 
+.text-preset-1-bold {
+  font-weight: var(--fw-bold);
+  font-size: rem(20px);
+  line-height: 1.3em;
+  letter-spacing: rem(0.25px);
+}
+
+.text-preset-2-bold {
+  font-weight: var(--fw-bold);
+  font-size: rem(13px);
+  line-height: 1.4em;
+  letter-spacing: 0.0012em;
+}
+
+.text-preset-2-medium {
+  font-weight: var(--fw-medium);
+  font-size: rem(13px);
+  line-height: 1.4em;
+  letter-spacing: 0.0012em;
+}
+
+.text-preset-3 {
+  font-weight: var(--fw-medium);
+  font-size: rem(13px);
+  line-height: 1.4em;
+  letter-spacing: 0.25em;
+}
+
+.share-toast-mobile {}
+.share-toast-desktop {}
+.profile-and-date {}
+.share-button {}
 /* #endregion Reusable CSS */
 
 /* #region Mobile 375px */
