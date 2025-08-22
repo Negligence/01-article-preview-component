@@ -21,9 +21,11 @@
 
   <article class="container grid">
 
-    <img class="article__img" src="./assets/images/drawers.jpg" alt="drawers">
+    <div class="article__image grid">
+      <img class="article__img" src="./assets/images/drawers.jpg" alt="drawers">
+    </div>
 
-    <div class="article__content">
+    <div class="article__content grid">
 
       <h1 class="content__title text-preset-1-bold text-grey-900">
         Shift the overall look and feel by adding these wonderful
@@ -38,10 +40,14 @@
 
       <div class="content__meta">
 
-        <figure class="meta__profile">
-          <img class="profile__img" src="./assets/images/avatar-michelle.jpg" alt="Michelle Appleton">
+        <figure class="meta__profile grid">
+
+          <div class="profile__image">
+            <img class="profile__img" src="./assets/images/avatar-michelle.jpg" alt="Michelle Appleton">
+          </div>
           <figcaption class="profile__name text-preset-2-bold text-grey-900">Michelle Appleton</figcaption>
           <time class="profile__date text-preset-2-medium text-grey-400" datetime="2020-06-28">28 Jun 2020</time>
+
         </figure>
 
         <button type="button" class="share-button" aria-expanded="false">

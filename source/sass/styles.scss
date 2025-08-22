@@ -18,9 +18,7 @@ html {
 
   --ff-body: "Manrope", sans-serif;
 
-  // --fz-head: calc(20 / 16 * 1rem);
   --fz-body: calc(13 / 16 * 1rem);
-  // --fz-sub: calc(11 / 16 * 1rem);
 
   --fw-medium: 500;
   --fw-bold: 700;
@@ -77,7 +75,7 @@ body {
   font-optical-sizing: auto;
   font-family: var(--ff-body);
   font-size: var(--fz-body);
-  background-color: var(--light-grayish-blue);
+  background-color: var(--grey-200);
 }
 
 button {
@@ -193,65 +191,34 @@ main {
   width: rem(327px);
   height: rem(538px);
   border: 1px solid #000;
-  // padding-block: rem(71px);
-  // padding-inline: var(--s-300);
-  // row-gap: var(--s-300);
+}
+
+.article__image {
+  width: 100%;
+  height: rem(200px);
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .article__img {
-  width: 100%;
+  width: inherit;
 }
 
-.card {
-  width: rem(327px);
-  border-radius: var(--s-100);
-  padding: rem(26px) rem(32px) rem(32px) rem(32px);
+.article__content {
+  padding: rem(32px) rem(30px) rem(18px);
 }
 
-.card__profile {
-  display: flex;
-  align-items: center;
-  column-gap: rem(17px);
-  margin-block-end: rem(18px);
+.profile__image {
+  width: rem(40px);
+  height: rem(40px);
+  border-radius: 100vmax;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .profile__img {
-  box-sizing: content-box;
-  width: rem(28px);
-  height: rem(28px);
-  border: 2px solid transparent;
-  border-radius: 100vmax;
-}
-
-.profile__text {
-  display: grid;
-  row-gap: rem(4px);
-}
-
-.profile__title {
-  font-size: var(--fz-body);
-  font-weight: var(--fw-medium);
-  line-height: 1em;
-}
-
-.profile__description {
-  font-size: var(--fz-sub);
-  font-weight: var(--fw-medium);
-  line-height: 1em;
-  opacity: 50%;
-}
-
-.card__blockquote {
-  margin-block-end: rem(16px);
-  font-size: var(--fz-head);
-  font-weight: var(--fw-semi-bold);
-  line-height: auto;
-}
-
-.card__quote {
-  font-weight: var(--fw-medium);
-  line-height: em(18px, 13px);
-  opacity: 70%;
+  width: 100%;
+  height: 100%;
 }
 
 .card__1 {
@@ -267,34 +234,6 @@ main {
   .card__blockquote {
     margin-block-end: rem(40px);
     z-index: 1;
-  }
-
-  .card__quote {
-    color: #cfcfcf;
-  }
-
-  .profile__img {
-    border-color: hsl(264, 82%, 70%);
-  }
-}
-
-.card__2 {
-  background-color: var(--very-dark-grayish-blue);
-  color: var(--white);
-}
-
-.card__3,
-.card__5 {
-  background-color: var(--white);
-  color: var(--very-dark-grayish-blue);
-}
-
-.card__4 {
-  background-color: var(--very-dark-blackish-blue);
-  color: var(--white);
-
-  .profile__img {
-    border-color: hsl(263, 55%, 52%);
   }
 }
 
