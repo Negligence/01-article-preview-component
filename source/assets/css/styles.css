@@ -173,6 +173,29 @@ button {
   letter-spacing: 0.25em;
 }
 
+.share-button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100vmax;
+  background-color: var(--grey-200);
+  display: grid;
+  place-content: center;
+}
+
+.share-button,
+.share-button path {
+  transition: 350ms;
+}
+
+.share-button:hover,
+.share-button[aria-expanded=true] {
+  background-color: var(--grey-500);
+}
+
+.share-button:hover path {
+  fill: var(--white);
+}
+
 /* #endregion Reusable CSS */
 /* #region Mobile 375px */
 main {
@@ -183,9 +206,13 @@ main {
 }
 
 .container {
-  padding-block: 4.4375rem;
-  padding-inline: var(--s-300);
-  row-gap: var(--s-300);
+  width: 20.4375rem;
+  height: 33.625rem;
+  border: 1px solid #000;
+}
+
+.article__img {
+  width: 100%;
 }
 
 .card {

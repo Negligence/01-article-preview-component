@@ -153,11 +153,32 @@ button {
   letter-spacing: 0.25em;
 }
 
+.share-button {
+  width: rem(32px);
+  height: rem(32px);
+  border-radius: 100vmax;
+  background-color: var(--grey-200);
+  display: grid;
+  place-content: center;
+}
+
+.share-button,
+.share-button path {
+  transition: 350ms;
+}
+
+.share-button:hover,
+.share-button[aria-expanded=true] {
+  background-color: var(--grey-500);
+}
+
+.share-button:hover path {
+  fill: var(--white);
+}
+
 .share-toast-mobile {}
 .share-toast-desktop {}
 .profile-and-date {}
-.share-button {}
-.share-button:hover {}
 /* #endregion Reusable CSS */
 
 /* #region Mobile 375px */
@@ -169,9 +190,16 @@ main {
 }
 
 .container {
-  padding-block: rem(71px);
-  padding-inline: var(--s-300);
-  row-gap: var(--s-300);
+  width: rem(327px);
+  height: rem(538px);
+  border: 1px solid #000;
+  // padding-block: rem(71px);
+  // padding-inline: var(--s-300);
+  // row-gap: var(--s-300);
+}
+
+.article__img {
+  width: 100%;
 }
 
 .card {
