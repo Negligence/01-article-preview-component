@@ -144,7 +144,7 @@ button {
   letter-spacing: 0.0012em;
 }
 
-.text-preset-3 {
+.text-preset-3-medium {
   font-weight: var(--fw-medium);
   font-size: rem(13px);
   line-height: 1.4em;
@@ -155,7 +155,7 @@ button {
 /* #region Mobile 375px */
 main {
   width: inherit;
-  height: auto;
+  height: inherit;
   display: grid;
   place-content: center;
 }
@@ -165,8 +165,9 @@ main {
   height: rem(538px);
   background-color: var(--white);
   border-radius: rem(10px);
-  overflow: hidden;
   grid-template-rows: auto 1fr;
+  overflow: hidden;
+  position: relative;
 }
 
 .article__image {
@@ -187,6 +188,7 @@ main {
 .content__meta {
   grid-auto-flow: column;
   justify-content: space-between;
+  align-self: end;
 }
 
 .meta__profile {
@@ -232,8 +234,20 @@ main {
 }
 
 .share-toast {
-  display: none;
+  // display: none;
+  position: absolute;
+  inset: auto 0 auto 0;
+  height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  // justify-items: start;
+  padding-inline: rem(30px);
+  padding-block: rem(22px);
 }
+
+// .share-button:hover + .share-toast {
+//   display: initial;
+// }
 
 .card__1 {
   background-color: var(--moderate-violet);
