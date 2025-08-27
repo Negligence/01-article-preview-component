@@ -210,44 +210,59 @@ main {
   height: 100%;
 }
 
-.share-button {
+.meta__share-button {
   width: rem(32px);
   height: rem(32px);
   border-radius: 100vmax;
   background-color: var(--grey-200);
   display: grid;
   place-content: center;
+  z-index: 1;
 }
 
-.share-button,
-.share-button path {
+.meta__share-button,
+.meta__share-button path {
   transition: 350ms;
 }
 
-.share-button:hover,
-.share-button[aria-expanded=true] {
+.meta__share-button:hover,
+.meta__share-button[aria-expanded=true] {
   background-color: var(--grey-500);
 }
 
-.share-button:hover path {
+.meta__share-button:hover path {
   fill: var(--white);
 }
 
-.share-toast {
-  // display: none;
+.meta__share-toast {
   position: absolute;
-  inset: auto 0 auto 0;
-  height: 100%;
+  inset: auto 0 0 0;
+  height: rem(76px);
   display: grid;
-  grid-auto-flow: column;
-  // justify-items: start;
+  grid: ". ." / auto 1fr;
+  align-items: center;
+  justify-items: start;
+  column-gap: rem(24px);
   padding-inline: rem(30px);
   padding-block: rem(22px);
+  display: none;
 }
 
-// .share-button:hover + .share-toast {
-//   display: initial;
-// }
+.share-toast__social {
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
+  column-gap: rem(16px);
+  
+  a {
+    display: grid;
+    place-items: center;
+  }
+}
+
+.meta__share-button:hover + .meta__share-toast {
+  display: grid;
+}
 
 .card__1 {
   background-color: var(--moderate-violet);
