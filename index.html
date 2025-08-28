@@ -53,15 +53,22 @@
 
           </div>
 
-          <button class="meta__share-button" type="button" aria-expanded="false">
+          <button
+          class="meta__share-button"
+          id="share-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="share-toast"
+          aria-label="Share Button"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
           </button>
 
-          <div class="meta__share-toast bg-grey-900">
+          <div class="meta__share-toast bg-grey-900" id="share-toast">
 
             <span class="share-toast__text text-preset-3-medium text-grey-400">SHARE</span>
 
-            <div class="share-toast__social grid">
+            <div class="share-toast__social">
 
               <a href="https://www.facebook.com/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#FFF" d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z"/></svg>
@@ -94,7 +101,29 @@
   </footer>
 
   <script>
+    function shareToast() {
+      
+      const SHARE_TOAST = document.querySelector(`#share-toast`);
+      const SHARE_BTN = document.querySelector(`#share-button`);
 
+      function toggleShareToast() {
+
+        if (SHARE_BTN.ariaExpanded == "false") {
+          SHARE_BTN.ariaExpanded = "true";
+          SHARE_TOAST.classList.toggle(`meta__share-toast-active`);
+        }
+
+        else {
+          SHARE_BTN.ariaExpanded = "false";
+          SHARE_TOAST.classList.toggle(`meta__share-toast-active`);
+        }
+
+      }
+
+      SHARE_BTN.addEventListener(`click`, toggleShareToast);
+    }
+    
+    shareToast();
   </script>
 </body>
 </html>

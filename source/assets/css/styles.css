@@ -237,6 +237,7 @@ main {
   height: 2rem;
   border-radius: 100vmax;
   background-color: var(--grey-200);
+  align-self: center;
   display: grid;
   place-content: center;
   z-index: 1;
@@ -252,7 +253,8 @@ main {
   background-color: var(--grey-500);
 }
 
-.meta__share-button:hover path {
+.meta__share-button:hover path,
+.meta__share-button[aria-expanded=true] path {
   fill: var(--white);
 }
 
@@ -271,6 +273,7 @@ main {
 }
 
 .share-toast__social {
+  display: grid;
   grid-auto-flow: column;
   align-items: center;
   justify-items: center;
@@ -281,7 +284,7 @@ main {
   place-items: center;
 }
 
-.meta__share-button:hover + .meta__share-toast {
+.meta__share-toast-active {
   display: grid;
 }
 
