@@ -158,6 +158,8 @@ main {
   height: inherit;
   display: grid;
   place-content: center;
+  grid-auto-flow: column;
+  column-gap: 2rem;
 }
 
 .container {
