@@ -55,7 +55,6 @@
 
           <button
           class="meta__share-button"
-          id="share-button"
           type="button"
           aria-expanded="false"
           aria-controls="share-toast"
@@ -128,7 +127,6 @@
 
           <button
           class="meta__share-button"
-          id="share-button"
           type="button"
           aria-expanded="false"
           aria-controls="share-toast"
@@ -174,54 +172,32 @@
   </footer>
 
   <script>
-    // function shareToast() {
-      
-      // const SHARE_TOAST = document.querySelector(`#share-toast`);
-      // const SHARE_BTN = document.querySelector(`#share-button`);
-
-      // function toggleShareToast() {
-
-      //   if (SHARE_BTN.ariaExpanded == "false") {
-      //     SHARE_BTN.ariaExpanded = "true";
-      //     SHARE_TOAST.classList.toggle(`meta__share-toast-active`);
-      //   }
-
-      //   else {
-      //     SHARE_BTN.ariaExpanded = "false";
-      //     SHARE_TOAST.classList.toggle(`meta__share-toast-active`);
-      //   }
-
-      // }
-
-      // SHARE_BTN.addEventListener(`click`, toggleShareToast);
+    (function shareToast() {
 
       const SHARE_BTNS = document.querySelectorAll(`.meta__share-button`);
 
       SHARE_BTNS.forEach(share_btn => {
-
+        
+        const AUTHOR = share_btn.parentElement.children[0].children[1].children[0].innerText;
+        share_btn.nextElementSibling.id += ` ${AUTHOR.trim().replace(/\s/g, '-').toLowerCase()}`;
+        
         share_btn.addEventListener(`click`, () => {
-
-          const AUTHOR = share_btn.parentElement.children[0].children[1].children[0].innerText;
-
-          console.log(AUTHOR);
-
+          
           if (share_btn.ariaExpanded == "false") {
             share_btn.ariaExpanded = "true";
-            // SHARE_TOAST.classList.toggle(`meta__share-toast-active`);
+            share_btn.nextElementSibling.classList.toggle(`meta__share-toast-active`);
           }
 
           else {
             share_btn.ariaExpanded = "false";
-            // SHARE_TOAST.classList.toggle(`meta__share-toast-active`);
+            share_btn.nextElementSibling.classList.toggle(`meta__share-toast-active`);
           }
           
         });
         
       });
 
-    // }
-    
-    // shareToast();
+    })();
   </script>
 </body>
 </html>
