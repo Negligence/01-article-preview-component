@@ -184,9 +184,9 @@ main {
   column-gap: 2rem;
 }
 
-.container {
-  width: 20.4375rem;
-  height: 33.625rem;
+.article__container {
+  width: min(100% - 2rem, 20.4375rem);
+  height: max(33.625rem, 100% + 2rem);
   background-color: var(--white);
   border-radius: 0.625rem;
   grid-template-rows: auto 1fr;

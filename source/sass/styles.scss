@@ -162,9 +162,9 @@ main {
   column-gap: 2rem;
 }
 
-.container {
-  width: rem(327px);
-  height: rem(538px);
+.article__container {
+  width: min(calc(100% - 2rem), rem(327px));
+  height: max(rem(538px), calc(100% + 2rem));
   background-color: var(--white);
   border-radius: rem(10px);
   grid-template-rows: auto 1fr;
