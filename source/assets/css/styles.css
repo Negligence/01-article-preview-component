@@ -185,8 +185,8 @@ main {
 }
 
 .article__container {
-  width: min(100% - 2rem, 20.4375rem);
-  height: max(33.625rem, 100% + 2rem);
+  width: 20.4375rem;
+  height: 33.625rem;
   background-color: var(--white);
   border-radius: 0.625rem;
   grid-template-rows: auto 1fr;
@@ -194,15 +194,24 @@ main {
   position: relative;
 }
 
+@media only screen and (min-width: 48em) {
+  .article__container {
+    width: clamp(38rem, 29.2857rem + 18.1548vw, 45.625rem);
+    height: 21.625rem;
+    grid-template-rows: auto;
+    grid-template-columns: 14.3125rem 1fr;
+  }
+}
 .article__image {
   width: 100%;
-  height: 12.5rem;
+  height: 100%;
   object-fit: cover;
   overflow: hidden;
 }
 
 .article__img {
   width: inherit;
+  height: inherit;
 }
 
 .article__content {
