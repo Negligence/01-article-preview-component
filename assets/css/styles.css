@@ -194,17 +194,9 @@ main {
   position: relative;
 }
 
-@media only screen and (min-width: 48em) {
-  .article__container {
-    width: clamp(38rem, 29.2857rem + 18.1548vw, 45.625rem);
-    height: 21.625rem;
-    grid-template-rows: auto;
-    grid-template-columns: 14.3125rem 1fr;
-  }
-}
 .article__image {
   width: 100%;
-  height: 100%;
+  height: 12.5rem;
   object-fit: cover;
   overflow: hidden;
 }
@@ -218,6 +210,20 @@ main {
   padding: 2rem 1.875rem 1.125rem;
 }
 
+@media only screen and (min-width: 48em) {
+  .article__container {
+    width: clamp(38rem, 29.2857rem + 18.1548vw, 45.625rem);
+    height: 21.625rem;
+    grid-template-columns: 14.3125rem 1fr;
+  }
+  .article__image {
+    height: 100%;
+  }
+  .article__content {
+    padding: 2.5625rem 2.25rem 2.5625rem 2rem;
+    row-gap: 1.5rem;
+  }
+}
 .content__meta {
   grid-auto-flow: column;
   justify-content: space-between;
