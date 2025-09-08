@@ -302,6 +302,7 @@ main {
     width: clamp(38rem, 29.2857rem + 18.1548vw, 45.625rem);
     height: 21.625rem;
     grid-template-columns: 14.3125rem 1fr;
+    overflow: visible;
   }
   .article__image {
     height: 100%;
@@ -310,11 +311,23 @@ main {
     padding: 2.5625rem 2.25rem 2.5625rem 2rem;
     row-gap: 1.5rem;
   }
+  .content__meta {
+    position: relative;
+  }
   .attribution {
     position: fixed;
   }
 }
 /* #region Desktop Active */
+.meta__share-toast {
+  inset: auto auto 100% 166px;
+  width: 15.5rem;
+  height: 3.4375rem;
+  padding-block: 1.125rem;
+  padding-inline: 2.375rem;
+  border-radius: 0.625rem;
+}
+
 /* #endregion Desktop Active */
 /* #endregion Tablet 768px */
 /* #region Desktop 1440px */
