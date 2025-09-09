@@ -305,24 +305,36 @@ main {
   .attribution {
     position: fixed;
   }
-}
 
-/* #region Desktop Active */
-.meta__share-toast {
-  inset: auto auto 100% 166px;
-  width: rem(248px);
-  height: rem(55px);
-  padding-block: rem(18px);
-  padding-inline: rem(38px);
-  border-radius: rem(10px);
-  // display: grid;
-  // grid: ". ." / auto 1fr;
-  // align-items: center;
-  // justify-items: start;
-  // column-gap: rem(24px);
-}
-/* #endregion Desktop Active */
 
+  /* #region Desktop Active */
+  .meta__share-toast {
+    // inset: auto 0 0 0;
+    inset: auto auto 100% 166px;
+    width: rem(248px);
+    height: rem(55px);
+    padding-block: rem(18px);
+    padding-inline: rem(38px);
+    border-radius: rem(10px);
+    // display: grid;
+    // grid: ". ." / auto 1fr;
+    // align-items: center;
+    // justify-items: start;
+    // column-gap: rem(24px);
+  }
+
+  .meta__share-toast::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-color: #000;
+    border-style: solid;
+    border-top: 10px;
+    border-left: 5px;
+    border-right: 5px;
+  }
+  /* #endregion Desktop Active */
+}
 /* #endregion Tablet 768px */
 
 /* #region Desktop 1440px */

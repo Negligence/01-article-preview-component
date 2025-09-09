@@ -317,18 +317,27 @@ main {
   .attribution {
     position: fixed;
   }
+  /* #region Desktop Active */
+  .meta__share-toast {
+    inset: auto auto 100% 166px;
+    width: 15.5rem;
+    height: 3.4375rem;
+    padding-block: 1.125rem;
+    padding-inline: 2.375rem;
+    border-radius: 0.625rem;
+  }
+  .meta__share-toast::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-color: #000;
+    border-style: solid;
+    border-top: 10px;
+    border-left: 5px;
+    border-right: 5px;
+  }
+  /* #endregion Desktop Active */
 }
-/* #region Desktop Active */
-.meta__share-toast {
-  inset: auto auto 100% 166px;
-  width: 15.5rem;
-  height: 3.4375rem;
-  padding-block: 1.125rem;
-  padding-inline: 2.375rem;
-  border-radius: 0.625rem;
-}
-
-/* #endregion Desktop Active */
 /* #endregion Tablet 768px */
 /* #region Desktop 1440px */
 @media only screen and (min-width: 90em) {
