@@ -301,6 +301,7 @@ main {
   .article__container {
     width: clamp(38rem, 29.2857rem + 18.1548vw, 45.625rem);
     height: 21.625rem;
+    grid-template-rows: auto;
     grid-template-columns: 14.3125rem 1fr;
     overflow: visible;
   }
@@ -314,12 +315,20 @@ main {
   .content__meta {
     position: relative;
   }
+  .meta__profile {
+    position: absolute;
+    inset: auto auto auto auto;
+  }
+  .meta__share-button {
+    position: absolute;
+    inset: 0 0 0 auto;
+  }
   .attribution {
     position: fixed;
   }
   /* #region Desktop Active */
   .meta__share-toast {
-    inset: auto auto 100% 166px;
+    inset: auto auto 100% 55%;
     width: 15.5rem;
     height: 3.4375rem;
     padding-block: 1.125rem;

@@ -285,6 +285,7 @@ main {
   .article__container {
     width: clamp(38rem, 29.2857rem + 18.1548vw, 45.625rem);
     height: rem(346px);
+    grid-template-rows: auto;
     grid-template-columns: rem(229px) 1fr;
     overflow: visible;
   }
@@ -302,15 +303,25 @@ main {
     position: relative;
   }
 
+  .meta__profile {
+    position: absolute;
+    inset: auto auto auto auto;
+  }
+
+  .meta__share-button {
+    position: absolute;
+    inset: 0 0 0 auto;
+  }
+
   .attribution {
     position: fixed;
   }
 
-
   /* #region Desktop Active */
   .meta__share-toast {
-    // inset: auto 0 0 0;
-    inset: auto auto 100% 166px;
+    // position: relative;
+    inset: auto auto 100% 55%;
+    // inset: auto auto 100% 166px;
     width: rem(248px);
     height: rem(55px);
     padding-block: rem(18px);
