@@ -274,6 +274,7 @@ main {
   padding-inline: 1.875rem;
   padding-block: 1.375rem;
   display: none;
+  z-index: -1;
 }
 
 .share-toast__social {
@@ -315,35 +316,32 @@ main {
   .content__meta {
     position: relative;
   }
-  .meta__profile {
-    position: absolute;
-    inset: auto auto auto auto;
-  }
   .meta__share-button {
-    position: absolute;
-    inset: 0 0 0 auto;
+    position: relative;
   }
   .attribution {
     position: fixed;
   }
   /* #region Desktop Active */
   .meta__share-toast {
-    inset: auto auto 100% 55%;
+    inset: auto -325% 200% auto;
     width: 15.5rem;
     height: 3.4375rem;
     padding-block: 1.125rem;
     padding-inline: 2.375rem;
     border-radius: 0.625rem;
   }
-  .meta__share-toast::after {
+  .meta__share-button::before {
     content: "";
+    display: block;
+    position: absolute;
+    inset: auto auto 150% 25%;
     width: 0;
     height: 0;
-    border-color: #000;
-    border-style: solid;
-    border-top: 10px;
-    border-left: 5px;
-    border-right: 5px;
+    border-bottom: none;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #000000;
   }
   /* #endregion Desktop Active */
 }
