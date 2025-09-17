@@ -252,7 +252,6 @@ main {
   padding-inline: rem(30px);
   padding-block: rem(22px);
   display: none;
-  z-index: -1;
 }
 
 .share-toast__social {
@@ -312,7 +311,7 @@ main {
   .meta__share-button {
     // position: absolute;
     // inset: 0 0 0 auto;
-    position: relative;
+    // position: relative;
   }
 
   .attribution {
@@ -324,7 +323,7 @@ main {
     // position: relative;
     // inset: auto auto 100% 55%;
     // inset: auto auto 100% 166px;
-    inset: auto -325% 200% auto;
+    inset: auto -35% 200% auto;
     width: rem(248px);
     height: rem(55px);
     padding-block: rem(18px);
@@ -335,19 +334,20 @@ main {
     // align-items: center;
     // justify-items: start;
     // column-gap: rem(24px);
+    z-index: 1;
   }
 
-  .meta__share-button::before {
+  .meta__share-toast::after {
     content: "";
     display: block;
     position: absolute;
-    inset: auto auto 150% 25%;
+    inset: 100% auto auto 112px;
     width: 0;
     height: 0;
     border-bottom: none;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 15px solid #000000;
+    border-left: rem(12px) solid transparent;
+    border-right: rem(12px) solid transparent;
+    border-top: rem(12px) solid var(--grey-900);
   }
   /* #endregion Desktop Active */
 }
