@@ -101,10 +101,6 @@ button {
 
 /* #endregion Defaults */
 /* #region Reusable CSS */
-.grid {
-  display: grid;
-}
-
 .bg-grey-900 {
   background-color: var(--grey-900);
 }
@@ -189,22 +185,18 @@ main {
   height: 33.625rem;
   background-color: var(--white);
   border-radius: 0.625rem;
-  grid-template-rows: auto 1fr;
   overflow: hidden;
   position: relative;
-}
-
-.article__container {
   display: grid;
-  grid: "   img   img   " "   cnt   cnt   " "   meta  btn   ";
+  grid: "   img   img   " "   cnt   cnt   " 1fr "   meta  btn   "/1fr auto;
 }
 
 .article__image {
+  grid-area: img;
   width: 100%;
   height: 12.5rem;
   object-fit: cover;
   overflow: hidden;
-  grid-area: img;
 }
 
 .article__img {
@@ -213,15 +205,13 @@ main {
 }
 
 .article__content {
-  padding: 2rem 1.875rem 1.125rem;
   grid-area: cnt;
+  padding: 2rem 1.875rem 1.125rem;
+  display: grid;
 }
 
 .article__profile {
   grid-area: meta;
-  grid-auto-flow: column;
-  justify-content: space-between;
-  align-self: end;
 }
 
 .article__profile {
@@ -245,14 +235,6 @@ main {
 
 .article__button {
   grid-area: btn;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 100vmax;
-  background-color: var(--grey-200);
-  align-self: center;
-  display: grid;
-  place-content: center;
-  z-index: 1;
 }
 
 /* #region Mobile Active */
@@ -272,7 +254,7 @@ main {
 }
 
 .article__share-toast {
-  grid-area: btn;
+  grid-area: 3/1;
   position: absolute;
   inset: auto 0 0 0;
   height: 4.75rem;
@@ -304,62 +286,3 @@ main {
 
 /* #endregion Mobile Active */
 /* #endregion Mobile 375px */
-/* #region Extra Small 320px */
-/* #endregion Extra Small 320px */
-/* #region Tablet 768px */
-@media only screen and (min-width: 48em) {
-  .article__container {
-    width: clamp(38rem, 29.2857rem + 18.1548vw, 45.625rem);
-    height: 21.625rem;
-    grid-template-rows: auto;
-    grid-template-columns: 14.3125rem 1fr;
-    overflow: visible;
-  }
-  .article__image {
-    height: 100%;
-  }
-  .article__content {
-    padding: 2.5625rem 2.25rem 2.5625rem 2rem;
-    row-gap: 1.5rem;
-  }
-  .article__profile {
-    position: relative;
-  }
-  .attribution {
-    position: fixed;
-  }
-  /* #region Desktop Active */
-  .article__share-toast {
-    inset: auto -35% 200% auto;
-    width: 15.5rem;
-    height: 3.4375rem;
-    padding-block: 1.125rem;
-    padding-inline: 2.375rem;
-    border-radius: 0.625rem;
-    z-index: 1;
-  }
-  .article__share-toast::after {
-    content: "";
-    position: absolute;
-    inset: 100% auto auto 112px;
-    width: 0;
-    height: 0;
-    border-bottom: none;
-    border-left: 0.75rem solid transparent;
-    border-right: 0.75rem solid transparent;
-    border-top: 0.75rem solid var(--grey-900);
-  }
-  /* #endregion Desktop Active */
-}
-/* #endregion Tablet 768px */
-/* #region Desktop 1440px */
-@media only screen and (min-width: 90em) {
-  .article__container {
-    height: 17.5rem;
-    grid-template-columns: 17.8125rem 1fr;
-  }
-  .article__content {
-    padding: 1.875rem 2.5rem;
-  }
-}
-/* #region Desktop 1440px */
