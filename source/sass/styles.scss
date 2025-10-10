@@ -162,16 +162,17 @@ main {
   width: rem(327px);
   height: rem(538px);
   background-color: var(--white);
-  // grid-template-rows: auto 1fr;
   border-radius: rem(10px);
   overflow: hidden;
   position: relative;
   display: grid;
   grid:
-  "   img   img   "
-  "   cnt   cnt   " 1fr
-  "   meta  btn   "
-  /   1fr   auto;
+  "   img   img   img   img   "
+  "    .     .     .     .    " 32px
+  "    .    cnt   cnt    .    " 1fr
+  "    .    meta  btn    .    "
+  "    .     .     .     .    " 18px
+  /  30px   2fr   1fr   30px;
 }
 
 .article__image {
@@ -189,15 +190,12 @@ main {
 
 .article__content {
   grid-area: cnt;
-  padding: rem(32px) rem(30px) rem(18px);
   display: grid;
 }
 
 .article__profile {
   grid-area: meta;
-}
-
-.article__profile {
+  display: grid;
   grid-auto-flow: column;
   grid-template-columns: auto 1fr;
   column-gap: 1rem;
@@ -218,6 +216,14 @@ main {
 
 .article__button {
   grid-area: btn;
+  width: rem(32px);
+  height: rem(32px);
+  border-radius: 100vmax;
+  background-color: var(--grey-200);
+  display: grid;
+  place-self: center end;
+  place-content: center;
+  z-index: 1;
 }
 
   /* #region Mobile Active */

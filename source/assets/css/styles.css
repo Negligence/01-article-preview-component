@@ -188,7 +188,7 @@ main {
   overflow: hidden;
   position: relative;
   display: grid;
-  grid: "   img   img   " "   cnt   cnt   " 1fr "   meta  btn   "/1fr auto;
+  grid: "   img   img   img   img   " "    .     .     .     .    " 32px "    .    cnt   cnt    .    " 1fr "    .    meta  btn    .    " "    .     .     .     .    " 18px/30px 2fr 1fr 30px;
 }
 
 .article__image {
@@ -206,15 +206,12 @@ main {
 
 .article__content {
   grid-area: cnt;
-  padding: 2rem 1.875rem 1.125rem;
   display: grid;
 }
 
 .article__profile {
   grid-area: meta;
-}
-
-.article__profile {
+  display: grid;
   grid-auto-flow: column;
   grid-template-columns: auto 1fr;
   column-gap: 1rem;
@@ -235,6 +232,14 @@ main {
 
 .article__button {
   grid-area: btn;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100vmax;
+  background-color: var(--grey-200);
+  display: grid;
+  place-self: center end;
+  place-content: center;
+  z-index: 1;
 }
 
 /* #region Mobile Active */
