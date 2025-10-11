@@ -201,12 +201,13 @@ main {
 
 .article__img {
   width: inherit;
-  height: inherit;
 }
 
 .article__content {
   grid-area: cnt;
   display: grid;
+  place-content: start;
+  row-gap: 1.5rem;
 }
 
 .article__profile {

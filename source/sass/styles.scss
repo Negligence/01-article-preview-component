@@ -185,12 +185,14 @@ main {
 
 .article__img {
   width: inherit;
-  height: inherit;
+  // height: auto;
 }
 
 .article__content {
   grid-area: cnt;
   display: grid;
+  place-content: start;
+  row-gap: rem(24px);
 }
 
 .article__profile {

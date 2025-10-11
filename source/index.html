@@ -89,20 +89,20 @@
 
   </main>
 
-  
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT" target="_blank">Frontend Mentor</a>. 
     Coded by <a target="_blank" href="https://janpanado.com/">Jan Panado</a>.
   </footer>
 
   <script>
+
     (function shareToast() {
 
       const SHARE_BTNS = document.querySelectorAll(`.article__button`);
 
       SHARE_BTNS.forEach(share_btn => {
         
-        const AUTHOR = share_btn.parentElement.children[0].children[1].children[0].innerText;
+        const AUTHOR = share_btn.parentElement.children[2].children[1].children[0].innerText;
         share_btn.nextElementSibling.id += ` ${AUTHOR.trim().replace(/\s/g, '-').toLowerCase()}`;
         
         share_btn.addEventListener(`click`, () => {
